@@ -3,7 +3,7 @@ library(dplyr)
 
 #Zad 5-1
 library(readr)
-movies <- read_csv("movies.csv")
+movies <- read_csv("D:/informatyka/Folder Git/drugi folder/tipn_zad_goral/movies.csv")
 View(movies)
 
 
