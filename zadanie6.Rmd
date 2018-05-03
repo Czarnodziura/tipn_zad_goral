@@ -1,0 +1,151 @@
+---
+title: "zadanie6"
+output:
+  html_document:
+    theme: united
+    highlight: kate
+    df_print: paged
+---
+  
+## Honda Motor Company
+  
+Japoñskie przedsiêbiorstwo produkuj¹ce samochody, motocykle, skutery, samoloty, silniki oraz
+ró¿nego rodzaju maszyny. To tak¿e najwiêkszy producent silników na œwiecie. 
+Przedsiêbiorstwo posiada zak³ady produkcyjne w ponad 30 ró¿nych krajach.
+
+#### Co produkuje Honda?
+
+1. Samochody
+2. Bolidy wyœcigowe
+3. Motocykle
+4. Traktory
+5. Samoloty
+6. Silniki
+
+Wœród ka¿dej z tych kategorii produkowane s¹ ró¿ne rodzaje pojazdów. Bior¹c za przyk³ad motocykle, mo¿na
+wyró¿niæ motocykle:
+
+* Sportowe
+* Sportowo-turystyczne
+* Naked Bike
+* Cross
+* Chopper
+
+Wszystkie modele Hondy mo¿na zobaczyæ na stronie:
+
+[Honda](http://www.honda.pl/)
+
+Przy wyborze odpowiedniego modelu wa¿ne jest, by zapoznaæ siê z jego specyfikacjami, jak np.:
+
+| Silnik | Osi¹gi | Zu¿ycie paliwa | Wymiary |
+|---------|---------|---------|---------|
+| Rodzaj paliwa | Przyspieszenie | Cykl miejski |D³ugoœæ|
+| Pojemnoœæ | Prêdkoœæ maksymalna| Cykl pozamiejski |Szerokoœæ|
+| Moc maksymalna || Cykl mieszany |Rozstaw osi|
+| Maksymalny moment obrotowy || Emisja CO2||
+
+
+    Motto Hondy brzmi: The Power of Dreams
+
+  
+#### Samochody Honda
+```{r}
+library(tidyverse)
+library(ggplot2)
+
+mpg %>% filter(manufacturer == "honda")
+```
+
+
+#### Spalanie w mieœcie w zale¿noœci od pojemnoœci (samochody Honda Civic)
+```{r}
+library(tidyverse)
+library(ggplot2)
+
+auta <- mpg %>% filter(manufacturer == "honda")
+
+ggplot(auta, aes(displ, cty)) + 
+geom_point() +
+labs(title = "Spalanie a pojemnoœæ", x = "Pojemnoœæ", y = "Spalanie")
+```
+
+
+```{r include=FALSE}
+ library(tidyverse)
+library(ggplot2)
+
+mpg %>% filter(manufacturer == "honda", year == 2008)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
